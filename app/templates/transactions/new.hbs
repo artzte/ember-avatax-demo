@@ -1,0 +1,3 @@
+<h2>New transaction</h2>
+<p>Return to {{#link-to 'transactions.index'}}transactions{{/link-to}}.</p>
+{{transaction-form model=model errors=errors action=(route-action 'getTax' on='submit')}}

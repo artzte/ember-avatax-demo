@@ -1,0 +1,30 @@
+<p class='at-txn-count'>
+  Found {{count}} transaction(s)
+  {{#link-to 'transactions.new'}}Create a new transaction{{/link-to}}
+</p>
+<table class='pure-table'>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Date</th>
+      <th>Customer</th>
+      <th>Amount</th>
+      <th>Tax</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |transaction|}}
+      {{#transaction-table-row transaction=transaction as |row|}}
+        <td>
+          <div style='width: 5rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap'>
+            {{#link-to 'transactions.transaction' row.transaction}}{{row.transaction.code}}{{/link-to}}
+          </div>
+        </td>
+        <td>{{row.date}}</td>
+        <td>{{row.transaction.customerVendorCode}}</td>
+        <td>{{row.transaction.totalAmount}}</td>
+        <td>{{row.transaction.totalTax}}</td>
+      {{/transaction-table-row}}
+    {{/each}}
+  </tbody>
+</table>

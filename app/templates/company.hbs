@@ -1,0 +1,9 @@
+<h2>Company: {{model.name}} ({{model.companyCode}})</h2>
+<div class="pure-menu pure-menu-horizontal">
+  {{#link-to 'companies' class="pure-menu-heading pure-menu-link"}}Companies{{/link-to}}
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item">{{#link-to 'company' class='pure-menu-link'}}Config{{/link-to}}</li>
+      <li class="pure-menu-item">{{#link-to 'transactions' class='pure-menu-link'}}Transactions{{/link-to}}</li>
+    </ul>
+</div>
+{{outlet}}

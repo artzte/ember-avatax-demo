@@ -15,4 +15,6 @@ App = Ember.Application.extend({
 
 loadInitializers(App, config.modulePrefix);
 
+Ember.Inflector.inflector.irregular('nexus', 'nexus');
+
 export default App;

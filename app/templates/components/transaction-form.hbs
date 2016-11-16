@@ -1,0 +1,24 @@
+{{#each errors.base as |error|}}
+  <p style="color: red">{{error.message}}</p>
+{{/each}}
+
+<fieldset>
+  <label>
+    Customer
+  </label>
+  {{input value=model.customerCode}}
+  {{model.errors.customerCode}}
+  <label>
+    Invoice
+  </label>
+  {{input value=model.purchaseOrderNo}}
+  {{model.errors.purchaseOrderNo}}
+   <label>
+    Amount
+  </label>
+  {{input value=model.amount}}
+  {{model.errors.amount}}
+</fieldset>
+
+<button type="submit" class='pure-button pure-button-primary {{if isGettingTax "pure-button-disabled"}}'>Get tax</button>
+{{#link-to 'transactions.index'}}Cancel{{/link-to}}

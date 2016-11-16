@@ -1,0 +1,40 @@
+export default [
+  {
+    "id": 20769806,
+    "companyId": 1,
+    "country": "US",
+    "region": "US",
+    "jurisTypeId": "CNT",
+    "jurisCode": "US",
+    "jurisName": "UNITED STATES",
+    "shortName": "US",
+    "signatureCode": "",
+    "stateAssignedNo": "",
+    "nexusTypeId": "SalesOrSellersUseTax",
+    "hasLocalNexus": true,
+    "hasPermanentEstablishment": true,
+    "createdDate": "2016-11-13T06:43:13.42",
+    "createdUserId": 286069,
+    "modifiedDate": "2016-11-13T06:43:13.42",
+    "modifiedUserId": 286069
+  },
+  {
+    "id": 20769805,
+    "companyId": 1,
+    "country": "US",
+    "region": "WA",
+    "jurisTypeId": "STA",
+    "jurisCode": "53",
+    "jurisName": "WASHINGTON",
+    "shortName": "WA",
+    "signatureCode": "",
+    "stateAssignedNo": "",
+    "nexusTypeId": "SalesOrSellersUseTax",
+    "hasLocalNexus": false,
+    "hasPermanentEstablishment": true,
+    "createdDate": "2016-11-13T06:43:13.387",
+    "createdUserId": 286069,
+    "modifiedDate": "2016-11-13T06:43:13.387",
+    "modifiedUserId": 286069
+  }
+];

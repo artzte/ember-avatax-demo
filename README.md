@@ -1,9 +1,23 @@
 # Avatax-demo
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This demo shows how serializers and adapters work together to provide a
+nice mapping to a REST API. It includes an implementation of a mock
+server library using Pretender.
 
-## Prerequisites
+The [AvataxV2 REST API](https://developer.avalara.com/avatax/api-reference/tax/v2/)
+is based on the [Microsoft REST API Guidelines](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md).
+
+You can get a developer account for Avatax [here](https://developer.avalara.com/avatax/get-started).
+
+## Adding your basic auth
+
+    Add your basic auth to /config/environment.js
+
+## Running the demo
+
+    ember s --proxy=https://rest.avatax.com
+
+# Ember CLI readme material
 
 You will need the following things properly installed on your computer.
 

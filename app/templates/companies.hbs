@@ -1,0 +1,9 @@
+<h1>Companies</h1>
+<p class='at-companies-count'>Found {{count}} companies</p>
+<ul>
+  {{#each model as |company|}}
+    <li>{{#link-to 'company' company.id}}{{company.name}}{{/link-to}} ({{company.companyCode}})</li>
+  {{/each}}
+</ul>
+{{outlet}}
+
