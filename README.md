@@ -9,6 +9,9 @@ is based on the [Microsoft REST API Guidelines](https://github.com/Microsoft/api
 
 You can get a developer account for Avatax [here](https://developer.avalara.com/avatax/get-started).
 
+This app was the example for an EmberJS Seattle meetup. The presentation
+is [here](https://docs.google.com/presentation/d/1W523b-6kdEyjtuMZ89adE9h29jf4KkY5Mxi5SFUKD9E/edit?usp=sharing).
+
 ## Adding your basic auth
 
     Add your basic auth to /config/environment.js
