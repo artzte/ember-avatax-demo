@@ -50,3 +50,29 @@ test('visiting /transactions', function(assert) {
     assert.ok(/\/api\/v2\/companies\/EMBERCO\/transactions/.test(requests[0].url) );
   });
 });
+
+
+test('visiting /transactions with more transactions', function(assert) {
+  assert.expect(3);
+
+  const fixture = mock.getFixture('transactions');
+
+  fixture.push(fixture[0]);
+  fixture.push(fixture[0]);
+
+  for(let i = 0; i < fixture.length; i++) {
+    fixture[i].id = i;
+  }
+
+  const url = '/c/1/transactions';
+  visit(url);
+
+  andThen(function() {
+    assert.equal(currentURL(), url);
+
+    const count = find('.at-txn-count');
+
+    // check dom
+    assert.ok(/3/.test(count.text()), 'Now there\'s three transactions');
+  });
+});
